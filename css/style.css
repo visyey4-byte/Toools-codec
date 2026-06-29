@@ -281,3 +281,12 @@ color:#ddd;
 line-height:1.8;
 
 }
+.feature{
+
+opacity:0;
+
+transform:translateY(50px);
+
+transition:.8s;
+
+}
