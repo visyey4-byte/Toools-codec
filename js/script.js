@@ -68,3 +68,28 @@ document.getElementById("sidebar").style.right="-320px";
 document.getElementById("overlay").style.display="none";
 
 }
+document.querySelectorAll(".stats h2").forEach(counter=>{
+
+let target=parseInt(counter.innerText);
+
+let count=0;
+
+let speed=Math.ceil(target/80);
+
+let interval=setInterval(()=>{
+
+count+=speed;
+
+if(count>=target){
+
+count=target;
+
+clearInterval(interval);
+
+}
+
+counter.innerText=count+"+";
+
+},20);
+
+});
