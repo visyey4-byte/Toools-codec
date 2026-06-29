@@ -395,3 +395,77 @@ display:none;
 z-index:998;
 
 }
+.background{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+overflow:hidden;
+
+z-index:-1;
+
+}
+
+.background span{
+
+position:absolute;
+
+display:block;
+
+width:15px;
+
+height:15px;
+
+background:#1da1ff;
+
+border-radius:50%;
+
+opacity:.25;
+
+animation:float 18s linear infinite;
+
+}
+
+.background span:nth-child(1){left:10%;animation-duration:12s;}
+.background span:nth-child(2){left:20%;animation-duration:20s;}
+.background span:nth-child(3){left:35%;animation-duration:15s;}
+.background span:nth-child(4){left:45%;animation-duration:18s;}
+.background span:nth-child(5){left:55%;animation-duration:14s;}
+.background span:nth-child(6){left:65%;animation-duration:19s;}
+.background span:nth-child(7){left:75%;animation-duration:17s;}
+.background span:nth-child(8){left:85%;animation-duration:13s;}
+.background span:nth-child(9){left:92%;animation-duration:22s;}
+.background span:nth-child(10){left:98%;animation-duration:16s;}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(100vh) scale(.5);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:.4;
+
+}
+
+100%{
+
+transform:translateY(-150px) scale(1.4);
+
+opacity:0;
+
+}
+
+}
