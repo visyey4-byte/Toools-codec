@@ -53,3 +53,18 @@ card.style.transform="translateY(0)";
 });
 
 });
+function openMenu(){
+
+document.getElementById("sidebar").style.right="0";
+
+document.getElementById("overlay").style.display="block";
+
+}
+
+function closeMenu(){
+
+document.getElementById("sidebar").style.right="-320px";
+
+document.getElementById("overlay").style.display="none";
+
+}
