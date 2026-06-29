@@ -1,24 +1,37 @@
-window.onload=()=>{
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-setTimeout(()=>{
+function addToCart(name, price){
 
-document.getElementById("loader").style.display="none";
+cart.push({
+name:name,
+price:price
+});
 
-},2000);
+localStorage.setItem("cart",JSON.stringify(cart));
+
+alert("✅ تمت إضافة المنتج إلى السلة");
 
 }
 
-document.querySelectorAll("a").forEach(btn=>{
+function checkout(){
 
-btn.addEventListener("mouseenter",()=>{
+let message="السلام عليكم أريد شراء:%0A%0A";
 
-btn.style.transform="scale(1.05)";
+let total=0;
+
+cart.forEach((item,index)=>{
+
+message+=`${index+1}- ${item.name} (${item.price} ريال)%0A`;
+
+total+=item.price;
 
 });
 
-btn.addEventListener("mouseleave",()=>{
+message+=`%0Aالإجمالي: ${total} ريال`;
 
-btn.style.transform="scale(1)";
+window.open(`https://wa.me/966555439640?text=${message}`);
+
+}
 
 });
 
