@@ -36,3 +36,20 @@ window.open(`https://wa.me/966555439640?text=${message}`);
 });
 
 });
+window.addEventListener("scroll",()=>{
+
+document.querySelectorAll(".feature").forEach((card,index)=>{
+
+const top=card.getBoundingClientRect().top;
+
+if(top<window.innerHeight-100){
+
+card.style.opacity="1";
+
+card.style.transform="translateY(0)";
+
+}
+
+});
+
+});
